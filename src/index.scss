@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-primary), sans-serif;
   color: var(--color-light-100);
 }
 
