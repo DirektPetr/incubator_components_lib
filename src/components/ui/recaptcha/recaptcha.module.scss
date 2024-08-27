@@ -1,7 +1,4 @@
 .recaptchaRoot {
-  display: flex;
-  justify-content: space-between;
-
   width: 300px;
   height: 79px;
   padding: 0 12px;
@@ -15,14 +12,7 @@
   .containerLeft {
     display: flex;
     flex-direction: row;
-    gap: 13px;
     align-items: center;
-  }
-
-  .checkbox {
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
   }
 
   .label {
@@ -56,6 +46,100 @@
   }
 }
 
+.default {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  .checkbox {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    margin-right: 13px;
+  }
+}
+
+.checked {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkedIcon {
+  margin-right: 0;
+  font-size: 31px;
+  font-weight: bold;
+  color: #19983b;
+}
+
+.loading {
+  display: flex;
+  justify-content: space-between;
+
+  .loader {
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+
+    border-top: 3px solid #4d8df4;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+    border-radius: 50%;
+
+    animation: rotation 1.2s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .checkbox {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    margin-right: 13px;
+  }
+}
+
 .error {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  width: 314px;
+  padding: 8px 7px 13px;
+
   border: 1px solid red;
+}
+
+.errorMsg {
+  font-family: var(--font-family-recapcha), sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 11.72px;
+  color: red;
+  text-align: left;
+}
+
+.expiredMsg {
+  position: absolute;
+  top: 18px;
+  left: 28px;
+
+  width: 175px;
+
+  font-family: var(--font-family-recapcha), sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 11.72px;
+  color: red;
+  text-align: left;
 }
